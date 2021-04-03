@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <title>La carte de location de vélo</title>
+        <meta charset='utf-8'/> <!--Définition d'un encodage d'écriture-->
+        <link rel='stylesheet' href='P3_01_CSS/css/style.css' /> <!--Inclusion du fichier style.css pour les règles css spécifiques-->
+        <link rel='stylesheet' href='P3_02_FONTS/fonts/css/all.css' /> <!--pour la police font awesome source: https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself-->
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" /> <!--Pour gérer la carte CDN-->
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script> <!--Inlusion fichiers pour maps leaflet-->
+        <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script> <!--Inclusion du cdn jquery min-->
+		
+    </head>
+    <body>
+        <div id='titre1Conteneur'>
+            <h1 id='titre1'>Bienvenue a Nancy avec les vélOstan'lib vélo en libre service</h1>
+        </div>
+        <section id="slide">
+            <img src='img/1.png' id="diap1" alt="slider">
+            <div id="action">
+                <i id="prev" class="fas fa-arrow-circle-left"></i> <!-- Prev icon -->
+                <i id="pause" class="fas fa-pause-circle"></i> <!-- Pause icon -->
+                <i id="play" class="fas fa-play-circle"></i> <!-- Play icon -->
+                <i id="next" class="fas fa-arrow-circle-right"></i> <!-- Next icon -->
+            </div>    
+        </section>
+
+        <!--Conteneur pour la map et la partie détails réservation-->
+        <div id="conteneurMapReservation">
+            <!--Partie map-->
+            <div id="map">
+            </div>
+            
+            <!--Partie détails de la réservation qui apparait au clic sur une station dans la partie map-->
+            <div id="conteneurstation"> 
+                <div id="formreservation">
+                    <div>Station sélectionnée :</div>
+                    <div id="choixstation"></div>
+                    <div id="infosstation"></div>
+                    <input type="text" name="nom" id="nom" placeholder="Nom" required>
+                    <input type="text" name="prenom" id="prenom" placeholder="Prénom" required>
+                    <canvas id='canvas'></canvas>
+                    <canvas id="blank"></canvas>
+                    <div id="signmessage"></div>
+                    <input id='effacercanvas' type='button' value='effacer la signature'/>
+                    <input id='validationbouton' type='button' value='valider'/>
+                </div>
+            </div>
+        </div>
+        
+        <!--Partie infos réservation qui apparait quand le visiteur a réservé un vélo-->
+        <div id="infosReservation">
+            <div  id='texttimer'></div>
+            <div  id='timer'></div>
+            <div id='texteannulation'>La réservation est annulée</div>
+            <input id="annulation" type="button" value="annuler réservation"/>
+        </div>
+
+        <!--Inclusion des scripts js-->
+            <script src='P3_03_JS/js/ajax.js'></script> <!--Inclusion des requêtes Ajax-->
+            <script src='P3_03_JS/js/slider.js'></script>
+            <script src='P3_03_JS/js/canvas.js'></script>
+            <script src='P3_03_JS/js/timer.js'></script>
+            <script src='P3_03_JS/js/map.js'></script> <!--Inclusion du js pour la map (source: https://openlayers.org/en/latest/doc/quickstart.html-->
+            
+        
+    </body>
+</html>

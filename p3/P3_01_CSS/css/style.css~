@@ -1,0 +1,246 @@
+/*Pour Inserer la police d'écriture google si besoin
+    font-family: 'Nunito', sans-serif;
+*/
+
+
+/*Source couleurs: https://colorhunt.co/palette/124155 */
+
+*,*::before, *::after {box-sizing: border-box;} /* */
+*{
+    font-family: 'Nunito', sans-serif, "Arial"; /*Définition de la police d'écriture pour tous le document */
+}
+
+
+body{
+    margin: 0px 80px;
+    background-color: hsl(100,90%,77%); /*rajouter le 24.10.20 */
+    /*background: url('../img/background.jpg');*/
+    background-size: cover;
+    padding-bottom: 50px; /* pour aérer le bas de la page */
+   
+
+}
+#titre1Conteneur{
+    text-align: center;
+}
+#titre1{ /*animation du titre */
+    animation: 2s infinite alternate blink;
+    color: black;
+}
+
+@keyframes blink{ /*Suite de l'animation du titre */
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+/*-----------------------------------------------------------------------------------------------------------
+            Partie slider 
+-----------------------------------------------------------------------------------------------------------*/
+#slide{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#diap1{
+    width: 100%;
+    height: 70vh;
+    border-radius: 15px; /*POur arrondir les bords */
+}
+#action{
+    display: flex;
+    justify-content: center;
+}
+#prev, #next, #pause, #play {
+  font-size: 3em;
+  color: white;
+}
+#play{
+    display: none;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------
+            partie carte et cadre réservation
+-----------------------------------------------------------------------------------------------------------*/
+#conteneurMapReservation{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;  
+}
+#map{
+    width: 59%;
+    height: 600px;
+    border-radius: 10px;
+}
+.ol-overlaycontainer-stopevent{ /*Pour le placement de la mention "© OpenStreetMap contributors." en bas a gauche de la map */
+    top: 360px;
+}
+.ol-zoom, .ol-rotate, .ol-compass{ /* Effacement de l'affichage des éléments zoom, rotate et compass (tout ce fait avec la souris) */
+    display: none; 
+}
+.ol-attribution > button{
+    display: none;
+}
+.leaflet-popup{
+    font-size: 18px;
+}
+#conteneurstation{
+    background-color: hsl(100, 56%, 48%);
+    width: 39%;
+    height: 600px;
+    border-radius: 50px;
+}
+#formreservation{
+    height: 600px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#infosstation{
+    text-align: center;
+}
+
+#nom{
+    display: block; /* utilisé pour enlever les balises <br/> dans le code html source: https://stackoverflow.com/questions/17494029/has-css-replaced-br */
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#prenom{
+    display: block; /* utilisé pour enlever les balises <br/> dans le code html source: https://stackoverflow.com/questions/17494029/has-css-replaced-br */
+    text-align: center;
+    border-radius: 10px;
+}
+#canvas{
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: default;
+}
+#blank{
+    display: none;
+}
+#effacercanvas{
+    display: block; /* utilisé pour enlever les balises <br/> dans le code html source: https://stackoverflow.com/questions/17494029/has-css-replaced-br */
+    margin-top: 20px;
+    background-color: #FF3300; /* fond de couleur rouge pour le bouton effacer canvas */
+    border-radius: 10px; /*mis bords arrondis */
+    border: 0px; /*suppression de la bordure */
+    font-size: 20px; /*20px de size*/
+    padding: 10px 20px; /*pour grossir le bouton et l'aérer */
+}
+#validationbouton{
+    margin-top: 20px;
+    background-color: #33CC00; /* fond de couleur rouge pour le bouton effacer canvas */
+    border-radius: 10px; /*mis bords arrondis */
+    border: 0px; /*suppression de la bordure */
+    font-size: 20px; /*20px de size*/
+    padding: 10px 20px; /*pour grossir le bouton et l'aérer */
+    
+}
+
+/*--------------------------------------------------------------------------------
+        Partie timer et annulation
+--------------------------------------------------------------------------------*/
+#infosReservation{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    padding: 30px;
+    border-radius: 50px;
+    background-color: #1687a7;
+}
+#texttimer{
+    font-size: 25px;
+}
+#texteannulation{
+    display: none; /*apparait au clic sur le bouton annuler réservation */
+    font-size: 25px;
+}
+
+.infosimportantes{ /*rassemble la station sélectionnée et le compte à rebours dans la partie timer */
+    color: red;
+}
+#annulation{
+    padding: 15px;
+    border-radius: 15px;
+    border: 0px;
+    background-color: darkorange;
+    color: white;
+    font-size: 20px;
+}
+#nom, #prenom{
+    padding: 5px 70px; /*pour agrandir la zone de texte */
+}
+
+
+/*--------------------------------------------------
+        Partie responsive
+--------------------------------------------------*/
+
+/*Partie tablette*/
+
+@media only screen and (max-width: 1024px){
+    #conteneurMapReservation {
+        display: block;
+        margin-top: 5px;
+    }
+    #map{
+        width: 70%;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    #conteneurstation, #formreservation{
+        width: 70%;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #formreservation{
+        text-align: center;
+        padding-top: 20px;
+    }
+
+ }
+
+ /* Partie Smartphone */
+ @media only screen and (max-width: 480px) {
+     #conteneurMapReservation{
+         margin-top: 10px;
+     }
+     #map{
+         width: 90%;
+         height: 250px;
+     }
+     .leaflet-popup{
+        font-size: 10px;
+    }
+    
+     #conteneurstation, #formreservation{
+         width: 98%;
+     }
+     #choixstation{
+         font-size: 15px;
+     }
+     #effacercanvas{
+        padding: 5px 10px; /*pour grossir le bouton et l'aérer */
+    }
+    #validationbouton{
+        padding: 5px 10px; /*pour grossir le bouton et l'aérer */
+    }
+ }

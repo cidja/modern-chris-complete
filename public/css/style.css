@@ -1,0 +1,299 @@
+:root{
+    --pastel-blue : hsl(211, 100%, 80%);
+    --pastel-orange : hsl(27, 98%, 80%);
+    --pastel-green : hsl(134, 61%, 80%);
+    --pastel-yellow: hsl(45, 100%, 80%);
+    --pastel-red:hsl(354, 68%, 80%);
+    --pastel-indigo: hsl(241, 83%, 91%);
+
+
+}
+::before, :after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--pastel-blue);
+    font-family: 'Chakra Petch', sans-serif !important; /* font-google */
+}
+.dnone{ 
+    display: none !important;}
+.dblock{
+    display: block !important;}
+
+/* -----------------MENU PART (template)---------------*/
+#brand{
+    transition: all 0.5s ease-out;
+}
+#brand:hover, #brand:focus{
+    background-color: grey;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#menu{
+    font-size: 25px;}
+
+#linkP1{
+    background-color: var(--blue);
+    transition: all 0.3s ease-out;}
+#linkP2{
+    background-color: var(--indigo);
+    transition: all 0.3s ease-out;}
+#linkP3{
+    background-color: var(--red);
+    transition: all 0.3s ease-out;}
+#linkP4{
+    background-color: var(--yellow);
+    transition: all 0.3s ease-out;}
+#linkP5{
+    background-color: var(--orange);
+    transition: all 0.3s ease-out;}
+#linkajjardin{
+    background-color: var(--blue);
+    transition: all 0.3s ease-out;}
+
+#linkhuclink{
+    background-color: var(--indigo);
+    transition: all 0.3s ease-out;}
+    /*#linkP1:hover, #linkP1:focus,#linkP2:hover, #linkP2:focus,#linkP3:hover, #linkP3:focus,#linkP4:hover, #linkP4:focus,#linkP5:hover, #linkp5:focus*/
+/*transition for template menu  source: https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS*/
+.dropdown-menu > .dropdown-item{
+    color: var(--white);}
+
+#projetsLink, #cvLink, #mailLink, #linkedInLink, #attestationLink{
+    transition: all 0.2s ease-out;
+    color: white;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#projetsLink{
+    background-color: var(--red);}
+#cvLink{
+    background-color: var(--orange);}
+#mailLink{
+    background-color: var(--green);}
+#linkedInLink{
+    background-color: var(--blue);}
+#attestationLink{
+    background-color: var(--indigo);}
+
+
+/* #cvLink:hover, #cvLink:focus, #projetsLink:hover, #projetsLink:focus, #mailLink:hover, #mailLink:focus, #linkedInLink:hover, #linkedInLink:focus, #attestationLink:hover, #attestationLink:focus{
+font-size: 30px;} */
+.titleH2{ /* for title animation in home and projetPage */
+    animation: titleApparition 1.5s;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+@keyframes titleApparition{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
+
+.textContainer{
+    overflow: hidden;}
+.textProjects{ /*to keep text apparition in the box */
+    overflow: hidden;}
+.subTitleProject{ /*under maintitle in project page */
+    animation: subTitleGliss 1s;
+    position: relative;
+}
+@keyframes subTitleGliss{
+    from{left:100%;}
+    to{left:0%;}
+}
+#contentProjectTextOnly{
+    animation: contentProjectGliss 2.5s;
+    position: relative;
+    display: block;
+}
+@keyframes contentProjectGliss{
+    from{right: 100%;}
+    to{right: 0%;}
+}
+#moreInfosButton{
+    display: none !important;
+    text-align: center;}
+   
+/*-------------END MENU PART ---------------------*/
+
+#paraTitle{
+    margin-top: 100px;}
+
+.bigFont{ /*to bold*/
+    font-weight: bold;}
+
+
+#bigContainer{
+    background-color: var(--pastel-blue);
+    padding: 1px;
+    overflow: hidden;
+}
+
+
+/* --------------------------------Aj----------------------------------------*/
+#titleAj{
+    background-color: var(--green);
+}
+/* --------------------------------p5----------------------------------------*/
+#titleP5{
+    background-color: var(--orange);}
+
+/* --------------------------------p4----------------------------------------*/
+#titleP4{
+    background-color: var(--yellow);}
+
+/* --------------------------------p3----------------------------------------*/
+#titleP3{
+    background-color: var(--red);}
+
+/* --------------------------------p2----------------------------------------*/    
+#titleP2{
+    background-color: var(--indigo);}
+
+/* --------------------------------p1----------------------------------------*/
+#titleP1{
+    background-color: var(--blue);}
+
+
+
+/* ----------------------------Home part-------------------------------------
+is where I put all css property for homepage--------------------------------*/
+
+/* -------------------part for container in home selection and in different parts projects ---------*/
+
+.textInnerImg{ /*for text in image at home */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* si on remet les bordures sur les images dans le home
+.allContainerHome{
+    padding: 20px;
+    border-radius: 20px;
+} */
+
+/* -----------------Element ajjardin -------------------------*/
+#elementajjardin{animation: appearaj 1.5s;}
+@keyframes appearaj{
+    from{transform: translateX(-100%);}
+    to{transform: translateX(0%);}}
+#cadreaj{background-color: var(--green) !important;}
+
+ #bigContainerAj{/* pour le cadre autour des images sur le home */
+    background-color: var(--pastel-green);} 
+
+/* -----------------Element p5 (il était une fois) -------------------------*/
+#elementp5{animation: appearp5 2.5s;}
+@keyframes appearp5{
+    from{transform: rotateY(90deg);}
+    to{transform: rotateY(0deg);}}
+#cadrep5{background-color: var(--orange) !important;}
+
+ #bigContainerp5{/* pour le cadre autour des images sur le home */
+    background-color:var(--pastel-orange);} */
+
+/* -----------------Element p4 (blog jean forteroche) -------------------------*/
+#elementp4{animation: appearp4 2s;}
+@keyframes appearp4{
+    from{transform: rotateY(90deg);}
+    to{transform: rotateY(0deg);}}
+#cadrep4{background-color: var(--yellow) !important;}
+
+ #bigContainerp4{/* pour le cadre autour des images sur le home */
+    background-color: var(--pastel-yellow);} 
+
+/* -----------------Element p3 (location vélo) -------------------------*/
+#elementp3{animation: appearp3 2.5s;}
+@keyframes appearp3{
+    from{transform: translateX(100%);}
+    to{transform: translateX(0%);}}
+#cadrep3{background-color: var(--red) !important;}
+
+#bigContainerp3{/* pour le cadre autour des images sur le home */
+    background-color: var(--pastel-red);} /* source: https://colorhunt.co/palette/153787 */
+
+/* -----------------Element p2 (blog wordpress) -------------------------*/
+#elementp2{animation: appearp2 3s;}
+@keyframes appearp2{
+    from{transform: translateY(100%);}
+    to{transform: translateY(0%);}}
+#cadrep2{background-color: var(--indigo) !important;}
+
+ #bigContainerp2{/* pour le cadre autour des images sur le home */
+    background-color: var(--pastel-indigo);} 
+
+/* -----------------Element p1 (site one page) -------------------------*/
+#elementp1{animation: appearp1 3s;}
+@keyframes appearp1{
+    from{transform: translateY(100%);}
+    to{transform: translateY(0%);}}
+
+#cadrep1{
+    background-color: var(--blue) !important;}
+    
+ #bigContainerp1, #containerp1Home{ /* pour le cadre autour des images sur le home */
+        background-color: var(--pastel-blue);} 
+
+
+.bigContainerStyle{
+    padding-top: 80px;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    font-size: 20px;
+    background-color: var(--pastel-blue);
+}
+
+
+/*------------------- Project parts---------------------- */
+
+
+
+#textBetweenArrows{
+    padding: 0px 10px;}
+.arrowDown{ /*arrows in p1,p2,p3,p4,p5 */
+    color: #3fc1c9;
+    animation-duration: 3s;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+}
+@keyframes bounce{ /* source: https://www.tutorialspoint.com/css/css_animation_bounce.htm */
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+   40% {transform: translateY(-20px);} 
+   60% {transform: translateY(-10px);}
+}
+
+
+
+ /*-------------------------------------------------
+             For smartphones 
+--------------------------------------------------*/
+@media only screen and (max-width: 480px){
+    #moreInfosButton{
+        display: block !important;
+    }
+    #contentProjectTextOnly{
+        display: none;
+        animation: appearTextButton 1s;
+    }
+    @keyframes appearTextButton {
+        from{bottom: 100%;}
+        to{bottom:0%;}
+    }
+
+}

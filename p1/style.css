@@ -1,0 +1,983 @@
+/*je commence pas l'installation des polices d'écriture, ensuite déclaration des régles css body et générales (h1, p,...)
+pour continuer dans le plus précis avec les class et les id */
+
+/*contact pour maintenance ou renseignement sur le code : cidja@hotmail.fr */
+
+/*Installation des polices d'écritures */
+
+
+@font-face{ /*police d'écriture pour les symboles, avec plusieurs formats */
+    font-family: fontawesome-webfont;
+    src: url('fonts/webfonts/fa-brands-400.eot') format('eot');
+	src: url('fonts/webfonts/fa-brands-400.svg') format('svg');
+    src: url('fonts/webfonts/fa-brands-400.ttf') format('truetype');
+    src: url('fonts/webfonts/fa-brands-400.woff') format('woff');
+    src: url('fonts/webfonts/fa-brands-400.woof2') format('woff2');
+    src: url('fonts/webfonts/fa-regular-400.eot') format('eot');
+	src: url('fonts/webfonts/fa-regular-400.svg') format('svg');
+    src: url('fonts/webfonts/fa-regular-400.ttf') format('truetype');
+    src: url('fonts/webfonts/fa-regular-400.woff') format('woff');
+    src: url('fonts/webfonts/fa-regular-400.woff2') format('woff2');
+    src: url('fonts/webfonts/fa-solid-900.eot') format('eot');
+	src: url('fonts/webfonts/fa-regular-400.svg') format('svg');
+    src: url('fonts/webfonts/fa-solid-900.ttf') format('truetype');
+    src: url('fonts/webfonts/fa-solid-900.woff') format('woff');
+    src: url('fonts/webfonts/fa-solid-900.woff2') format('woff2');
+    
+}
+
+
+*,*::before, *::after {box-sizing: border-box;} /* */
+
+
+
+/*-----------Je crée des classes que j'appelerais quand j'ai besoin dans les déclarations css pour m'éviter de devoir les réecrire sans cesse */
+
+.autolr{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.maxw360px{max-width: 360px;}
+.maxw1400px{max-width: 1400px;} /*maximum en largeur de 1400px du conteneur */
+.maxw1500px{max-width: 1500px;}
+.maxw1600px{max-width: 1600px;}
+
+
+.anone{ /*pour enlever les décoration des liens */
+    text-decoration: none;
+    color: #000000;
+}
+
+/*-----overflow-----*/
+.overhidden{overflow: hidden;}
+.overauto{overflow: auto;}
+.overscroll{overflow: scroll;}
+.overvisible{overflow: visible;}
+
+/*-----position----*/
+.pabsolute{position: absolute;}
+.prelative{position: relative;}
+.pfixed{position: fixed;}
+
+/*-----flex-----*/
+.flex{display: flex;}
+.flex-jb{justify-content: space-between;} /*mettre sur chaque côté */
+.flex-jc{justify-content: center;} /*centrer au milieu */
+.flex-ac{align-items: center;}
+.flex-wrap{flex-wrap: wrap;} /*autorise le retour à la ligne */
+
+.flexdrow{flex-direction: row;}
+.flexdrowrev{flex-direction: row-reverse;}
+.flexdcol{flex-direction: column;}
+.flexdcolrev{flex-direction: column-reverse;}
+/*----text-align----*/
+.txtleft{text-align: left;}
+.txtcenter{text-align: center;}
+.txtright{text-align: right;}
+.txtjustify{text-align: justify;}
+
+
+/*-----font-family----*/
+.Roboto-Regular{font-family: Roboto-Regular;}
+.Roboto-Black{font-family: Roboto-Black;}
+.Roboto-Bold{font-family: Roboto-Bold;}
+.Roboto-Medium{font-family: Roboto-Medium;}
+.Roboto-Light{font-family: Roboto-Light;}
+.Roboto{font-family: 'Roboto', sans-serif;} /*police d'écriture par défaut */
+
+/*-----font-weight-----*/
+.ftbold{font-weight: 700;}
+.ftblack{font-weight: 900;}
+
+/*-----font-color-----*/
+.fontcolorblack{color: black;}
+.fontcolorred{color: red;}
+
+
+/*-----font-size-----*/
+
+.fs10px{font-size: 10px;}
+.fs11px{font-size: 11px;}
+.fs12px{font-size: 12px;}
+.fs13px{font-size: 13px;}
+.fs14px{font-size: 14px;}
+.fs15px{font-size: 15px;}
+.fs16px{font-size: 16px;}
+.fs17px{font-size: 17px;}
+.fs18px{font-size: 18px;}
+.fs19px{font-size: 19px;}
+.fs20px{font-size: 20px;}
+.fs21px{font-size: 21px;}
+.fs22px{font-size: 22px;}
+.fs23px{font-size: 23px;}
+.fs24px{font-size: 24px;}
+.fs25px{font-size: 25px;}
+.fs26px{font-size: 26px;}
+.fs27px{font-size: 27px;}
+.fs28px{font-size: 28px;}
+.fs29px{font-size: 29px;}
+.fs30px{font-size: 30px;}
+.fs31px{font-size: 31px;}
+.fs32px{font-size: 32px;}
+.fs33px{font-size: 33px;}
+.fs34px{font-size: 34px;}
+.fs35px{font-size: 35px;}
+
+/*------Line-height-----*/
+
+.lh10px{line-height: 10px;}
+.lh15px{line-height: 15px;}
+.lh20px{line-height: 20px;}
+.lh25px{line-height: 25px;}
+.lh30px{line-height: 30px;}
+.lh35px{line-height: 35px;}
+.lh40px{line-height: 40px;}
+.lh45px{line-height: 45px;}
+.lh50px{line-height: 50px;}
+
+
+/*-----LARGEUR WIDTH % */
+
+.w10p{width: 10%;}
+.w20p{width: 20%;}
+.w25p{width: 25%;}
+.w30p{width: 30%;}
+.w40p{width: 40%;}
+.w50p{width: 50%;}
+.w60p{width: 60%;}
+.w70p{width: 70%;}
+.w80p{width: 80%;}
+.w90p{width: 90%;}
+.w100p{width: 100%;}
+
+
+/*-----Height px-----*/
+.h10px{height: 10px;}
+.h15px{height: 15px;}
+.h20px{height: 20px;}
+.h25px{height: 25px;}
+.h30px{height: 30px;}
+.h35px{height: 35px;}
+.h40px{height: 40px;}
+.h45px{height: 45px;}
+.h50px{height: 50px;}
+.h60px{height: 60px;}
+.h70px{height: 70px;}
+.h80px{height: 80px;}
+.h90px{height: 90px;}
+.h100px{height: 100px;}
+.h110px{height: 110px;}
+.h120px{height: 120px;}
+.h130px{height: 130px;}
+
+
+/*-----margin 4côtés en px-----*/
+.m0px{margin: 0px;}
+.m5px{margin: 5px;}
+.m10px{margin: 10px;}
+.m15px{margin: 15px;}
+.m20px{margin: 20px;}
+.m25px{margin: 25px;}
+.m30px{margin: 30px;}
+.m35px{margin: 35px;}
+.m40px{margin: 40px;}
+.m45px{margin: 45px;}
+.m50px{margin: 50px;}
+
+
+/*----margin-top px------*/
+.mt0px{margin-top: 0px;}
+.mt5px{margin-top: 5px;}
+.mt10px{margin-top: 10px;}
+.mt15px{margin-top: 15px;}
+.mt20px{margin-top: 20px;}
+.mt25px{margin-top: 25px;}
+.mt30px{margin-top: 30px;}
+.mt35px{margin-top: 35px;}
+.mt40px{margin-top: 40px;}
+.mt45px{margin-top: 45px;}
+.mt50px{margin-top: 50px;}
+.mt55px{margin-top: 55px;}
+.mt60px{margin-top: 60px;}
+.mt65px{margin-top: 65px;}
+.mt70px{margin-top: 70px;}
+.mt75px{margin-top: 75px;}
+.mt80px{margin-top: 80px;}
+.mt100px{margin-top:100px;}
+.mt200px{margin-top:200px;}
+
+/*------margin-top négative (-) en px------*/
+.mt-5px{margin-top: -5px;}
+.mt-10px{margin-top: -10px;}
+.mt-15px{margin-top: -15px;}
+.mt-20px{margin-top: -20px;}
+.mt-25px{margin-top: -25px;}
+.mt-30px{margin-top: -30px;}
+.mt-35px{margin-top: -35px;}
+.mt-40px{margin-top: -40px;}
+.mt-45px{margin-top: -45px;}
+.mt-50px{margin-top: -50px;}
+
+/*-----margin-bottom px-----*/
+.mb0px{margin-bottom: 0px;}
+.mb10px{margin-bottom: 10px;}
+.mb15px{margin-bottom: 15px;}
+.mb20px{margin-bottom: 20px;}
+.mb25px{margin-bottom: 25px;}
+.mb30px{margin-bottom: 30px;}
+.mb35px{margin-bottom: 35px;}
+.mb40px{margin-bottom: 40px;}
+.mb45px{margin-bottom: 45px;}
+.mb50px{margin-bottom: 50px;}
+.mb55px{margin-bottom: 55px;}
+.mb60px{margin-bottom: 60px;}
+.mb65px{margin-bottom: 65px;}
+.mb70px{margin-bottom: 70px;}
+.mb75px{margin-bottom: 75px;}
+.mb80px{margin-bottom: 80px;}
+.mb100px{margin-bottom: 100px;}
+.mb200px{margin-bottom: 200px;}
+
+/*-----margin top+bottom avec left+right 0px-----*/
+.mtb10pxlr0{margin: 10px 0px;}
+.mtb15pxlr0{margin: 15px 0px;}
+.mtb20pxlr0{margin: 20px 0px;}
+.mtb25pxlr0{margin: 25px 0px;}
+.mtb30pxlr0{margin: 30px 0px;}
+.mtb35pxlr0{margin: 35px 0px;}
+.mtb40pxlr0{margin: 40px 0px;}
+.mtb45pxlr0{margin: 45px 0px;}
+.mtb50pxlr0{margin: 50px 0px;}
+
+/*-----margin-left en %-----*/
+.ml0p{margin-left: 0%;}
+.ml1p{margin-left: 1%;}
+.ml2p{margin-left: 2%;}
+.ml3p{margin-left: 3%;}
+.ml4p{margin-left: 4%;}
+.ml5p{margin-left: 5%;}
+.ml6p{margin-left: 6%;}
+.ml7p{margin-left: 7%;}
+.ml8p{margin-left: 8%;}
+.ml9p{margin-left: 9%;}
+.ml10p{margin-left: 10%;}
+.ml20p{margin-left: 20%;}
+.ml30p{margin-left: 30%;}
+.ml40p{margin-left: 40%;}
+.ml50p{margin-left: 50%;}
+.ml60p{margin-left: 60%;}
+.ml70p{margin-left: 70%;}
+.ml80p{margin-left: 80%;}
+.ml90p{margin-left: 90%;}
+.ml98p{margin-left: 98%;}
+.ml100p{margin-left: 100%;}
+
+
+/*-----Margin-left en px-----*/
+.ml0px{margin-left: 0px;}
+.ml5px{margin-left: 5px;}
+.ml10px{margin-left: 10px;}
+.ml15px{margin-left: 15px;}
+.ml20px{margin-left: 20px;}
+.ml25px{margin-left: 25px;}
+.ml30px{margin-left: 30px;}
+.ml35px{margin-left: 35px;}
+.ml40px{margin-left: 40px;}
+.ml45px{margin-left: 45px;}
+.ml50px{margin-left: 50px;}
+
+
+
+
+/*-----padding en pixel (tous le tour)-----*/
+.pad10px{padding: 10px;}
+.pad15px{padding: 15px;}
+.pad20px{padding: 20px;}
+.pad25px{padding: 25px;}
+.pad30px{padding: 30px;}
+.pad35px{padding: 35px;}
+.pad40px{padding: 40px;}
+.pad45px{padding: 45px;}
+.pad50px{padding: 50px;}
+
+/*-----padding left+right avec top+bottom 0px-----*/
+.padtb0lr5px{padding: 0px 5px;}
+.padtb0lr10px{padding: 0px 10px;}
+.padtb0lr15px{padding: 0px 15px;}
+.padtb0lr20px{padding: 0px 20px;}
+.padtb0lr25px{padding: 0px 25px;}
+.padtb0lr30px{padding: 0px 30px;}
+.padtb0lr35px{padding: 0px 35px;}
+.padtb0lr40px{padding: 0px 40px;}
+.padtb0lr45px{padding: 0px 45px;}
+.padtb0lr50px{padding: 0px 50px;}
+
+/*-----padding-top en pixel------*/
+.padt0px{padding-top: 0px;}
+.padt5px{padding-top: 5px;}
+.padt10px{padding-top: 10px;}
+.padt15px{padding-top: 15px;}
+.padt20px{padding-top: 20px;}
+.padt25px{padding-top: 25px;}
+.padt30px{padding-top: 30px;}
+.padt35px{padding-top: 35px;}
+.padt40px{padding-top: 40px;}
+.padt45px{padding-top: 45px;}
+.padt50px{padding-top: 50px;}
+
+
+
+/*-----list-type-----*/
+.listtypenone{list-style-type: none;} /*pas de type pour la liste a puce */
+
+
+/*-----color-----*/
+.bleugris{color: #5DBCD2;}
+.blancgris{color: #fbf9fa;}
+
+
+
+
+
+
+
+
+h3{
+    font-weight: 900;
+}
+
+
+
+body{
+    margin: 0px 0%; /*pour que les éléments collent bien
+                             sur les côtés avec 0px de marge 
+                             et juste 1% de marge droite et gauche pour la lecture des textes*/
+
+     
+ }
+
+.header{
+    /*3 lignes d'en dessous pour conserver la même disposition qu'en flex */
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background-color: white; /*garde la même couleur */
+    z-index: 6; /*pour avoir le menu toujours au dessus de tous les éléments */
+    padding-left: 7%; /*pour centrer le header et aussi avoir les marges blanches sur les côtés */
+    padding-right: 3%; /*pour centrer le header et aussi avoir les marges blanches sur les côtés */
+}
+
+
+/*-----------------------------------------------------
+*           Section menu
+-------------------------------------------------------*/
+
+.menu_element:hover{
+    margin-top: -25px; /*margin négative pour coller le border en haut quand hover */
+    border-top: 5px solid rgb(93,188,210);
+    padding-top: 20px; /*padding pour éloigner le border du contenu */
+}
+
+
+/*-------------------------------------------------------
+*           Section slide
+-------------------------------------------------------*/
+.accueil{
+    background-image: url('images/slider/bg1.jpg');
+    background-size: cover; /*prend toute la largeur de l'écran */
+    background-position: center; /*quand on change la taille de la fenêtre l'image fait sa mise au point a droite pour conserver la petite fille */
+    height: 550px; /*hauteur de l'image */
+    width: 100%; /*pour prendre toute la largeur */
+}
+
+
+ /*2 flêches chevron */
+.fa-chevron-left{
+    background-color: rgba(128, 138, 128, 0.4); /*couleur du fond en transparence */
+    border-radius: 50px; /*radius élevé pour faire un cercle */
+    margin-left: -60px; /*margin-left négative pour le sortir du cadre avec un overflow hidden sur le conteneur */
+    padding: 25px 18px 25px 65px; /*largeur du border */
+}
+.fa-chevron-right{
+    background-color: rgba(128, 138, 128, 0.4); /*couleur du fond en transparence */
+    border-radius: 50px; /*radius élevé pour faire un cercle */
+    padding: 25px 65px 30px 18px; /*largeur du border */
+}
+
+
+.texte_slide{
+    
+        animation-duration: 2s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+   }
+@keyframes slidein{
+    from{
+        opacity: 0;
+    }
+    to{
+       opacity: 1;
+    }
+
+}
+
+.texte_slide_webagency{
+    color: #fbf9fa;
+    
+    font-size: 1rem; /*taille par défaut */
+}
+.boutonbleu{
+    border: 1px solid rgb(93,188,210); /*largeur de la bordure */
+    border-radius: 5px; /*arrondi de la bordure */
+    background-color: rgb(93,188,210); /*couleur de background du bouton */
+    color: #fbf9fa; /*couleur de l'écriture */
+    width: 21%; /*largeur du bouton */
+}
+.fond_timeline{
+    height: 5px;
+    width: 100%;
+    background-color: rgba(64, 64, 64, 0.7);
+    left: 0px;
+    bottom: 0px;
+    
+}
+.timeline{
+    height: 5px;
+    width: 100px;
+    background-color: rgb(93,188,210);
+    left: 0px;
+    bottom: 0px;
+    border: 2px solid rgb(93,188,210);
+}
+/*--------------------------------------------------------
+*           Section services
+*--------------------------------------------------------*/
+.circle_para_services{ /*permet de couper le border du trait */
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+}
+.circle_para_services_pie{ /*mis a part car icone légèrement plus grande donc ajustement à faire sur le padding-left */
+    padding-left: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+}
+
+/*--------------------------------------------------------
+*           Section projets
+----------------------------------------------------------*/
+.projets{
+    background-color: rgba(220, 220, 220, 0.5); /*fond gris clair */
+}
+/*ce bloc est dédié pour faire les lignes horizontales sur les côtés du point */
+.circle_titre{
+    display: block; 
+    text-align: center; /*centrer au milieu */
+    position: relative;
+    color: rgb(93,188,210);
+    margin-bottom: 15px; /*aére le texte */
+    }
+.circle_titre::before{
+    content: "";
+    left: 40%; /*largeur trait de gauche */
+    right: 40%; /*largeur trait de droite */
+    height: 2px; /* hauteur en pixel du trait */
+    background: #DCDCDC; /*couleur du trait */
+    position: absolute;
+    top: calc(50% - 1px);
+    }
+.circle_titre_submenu{
+    display: inline-block;
+    padding: 0 20px;
+    background: white;
+    position: relative;
+    z-index: 1;
+    }
+
+.circle_titre_projet{
+    display: block; 
+    text-align: center; /*centrer au milieu */
+    position: relative;
+    color: rgb(93,188,210);
+    margin-bottom: 15px; /*aére le texte */
+    }
+
+.circle_titre_projet::before{
+    content: "";
+    left: 35%;
+    right: 52%;
+    height: 2px;
+    background: #DCDCDC;
+    position: absolute;
+    top: calc(50% - 1px);
+    }
+.circle_titre_projet::after{
+    content: "";
+    left: 52%;
+    right: 35%;
+    height: 2px;
+    background: #DCDCDC;
+    position: absolute;
+    top: calc(50% - 1px);
+}
+.circle_titre_submenu_projet{
+    display: inline-block;
+    padding: 0 20px;
+    
+    position: relative;
+    z-index: 1;
+    }
+/*fin du bloc pour les lignes sur les côtes du point source: https://jsfiddle.net/94c7qyxy/ */
+
+.icon{ /*placement de la bordure autour des icones */
+    margin-right: 20px; /*écartement du texte par rapport au texte */
+    color: rgb(93,188,210);
+    border: 1px solid grey;
+    border-radius: 50px; /*pour faire un rond */
+    height: 77px;
+    width: 77px;
+    padding: 10px;
+}
+
+
+
+/*boutons all works ... */
+.bouton_select_portfolio_1{
+    border: 0px solid black;
+    background-color:  rgba(128, 138, 128, 0.4);
+    border-radius: 5px 0px 0px 5px; /*border radius haut gauche et bas gauche */ 
+    cursor: pointer; /*garde le curseur en mode souris */
+    }
+.boutons li{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.boutons label{
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.boutons li:hover::after{
+    font-family: 'fontawesome-webfont';
+    content: "\f0d7"; /*code unicode pour afficher la flêche en dessous en chargeant les polices en début de css*/
+    font-weight: 900;
+    font-size: 1.5em;
+    position: absolute;
+    bottom: -19px;
+    left: 45%;
+    color: #468cad;
+}
+
+
+.bouton_select_portfolio{
+    border: 0px solid black;
+    background-color:  rgba(128, 138, 128, 0.4);
+    cursor: pointer; /*garde le curseur en mode souris */
+}
+
+.bouton_select_portfolio_4{ /*4ième bouton et dernier sur la droite */
+    border: 0px solid black;
+    background-color:  rgba(128, 138, 128, 0.4);
+    border-radius: 0px 5px 5px 0px; /*border radius haut droite et bas droite */
+    cursor: pointer; /*garde le curseur en mode souris */
+}
+.ensemble_boutons_projets > li{ /*selection de tous les éléments li qui suivent un ul donc "boutons projets" */
+    margin-bottom: 0px; /*pour ne pas que ça bouge quand on survol avec la souris */
+    padding: 15px;
+}
+
+.boutons li:hover{ /*s'applique à tous les éléments avec la class qui a bouton_select dans son nom */
+    background-color:  rgb(93, 188, 210);
+    color: #fff;
+    border-bottom: 5px solid rgb(15, 150, 180);
+    padding-bottom: 5px;
+    
+} 
+
+
+
+
+/*flêches sous les boutons */
+
+
+.bouton_select_portfolio_1:hover > .arrow_1{
+    visibility: visible;
+}
+
+
+
+
+/* portfolio */
+
+.element{
+    width: 24%; /*largeur 24% pour laisser 1% d'espace entre chaque images */
+    margin-top: 1%; /*margin-top pour espacer les images entres elle sur la hauteur */
+    position: relative; /*parent de .text qui va permettre de positionner .text en absolute */
+    overflow: hidden;  /*Je cache le dépassement */
+   }
+
+.element img{
+    width: 100%; /*100% des tailles des images pour qu'elles remplissent entiérement les box flex */
+    
+}
+
+
+/*section hover portfolio*/
+
+.text{
+    position: absolute; /*pour le juxtaposer par dessus .element img */
+    left: 0px; /*Coller à droite */
+    bottom: 100%; /* mis en dessous */
+    transition: all 0.3s;
+    background-color: rgba(64, 64, 64, 0.7); /*fond avec une opacité légère */
+    width: 100%;
+    color: white; /*Couleur de l'écriture */
+    height: 80px; /*hauteur du fond background */
+    margin-bottom: 1%; /*Pour contrer le padding 1% du .element */
+}
+
+.text_img_portfolio{ /*texte qui apparait quand on survol l'image du portfolio */
+    font-family: Roboto;
+    font-weight: 900; /*très grosse écriture */
+    margin-top: 15px; /*décalage pour baisser l'écriture */
+    margin-left: 5%; /*écartement du texte du bord */
+}
+
+.sous_text_portfolio{ /*sous le titre des images au hover */
+    font-family: Roboto;
+    font-weight: 400; /*taille classique */
+}
+
+.element:hover .text{
+    bottom: 0px;
+    transition-delay: 0.3s;
+}
+
+.eye{
+    margin-top: -20px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: rgb(93,188,210);
+    height: 45px;
+    width: 45px;
+    padding: 12px;
+}
+
+
+
+/*--------Section contact---------*/
+
+
+iframe{
+    position: absolute; /*placement en position absolute pour placer l'enfant en relatif et pouvoir le bouger sur l'iframe */
+
+}
+.conteneur_iframe iframe{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    z-index: 1;
+}
+.filtre{
+    position: absolute;
+    background-color: rgba(102, 204, 255, 0.3);
+    width: 100%;
+    height: 550px;
+    z-index: 2;
+}
+
+.conteneur_form_contact{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    height: 550px;
+    position: relative;
+    z-index: 3;
+    margin-right: 10%; /*pour garder de l'espace sur la droite malgré les petits écrans */
+}
+
+.form_contact{
+    border: 1px solid black;
+    background-color: rgba(245,245,245, 0.85); /*gére la transparence du fond du formulaire de contact */
+}
+
+.submit_bouton{
+    border: 1px solid rgb(93,188,210);
+    border-radius: 5px;
+    background-color: rgb(93,188,210);
+    color: #fbf9fa;
+}
+
+
+
+/*----------------------------------------------------
+            partie responsive
+------------------------------------------------------*/
+
+
+/*breakpoint css (style ipad) max-width 1024 */
+
+
+/*-----------------------------------------------------
+            pour les tablettes 
+-------------------------------------------------------*/
+
+@media only screen and (max-width: 1024px){ 
+    /*section header */
+    .header{
+        justify-content: flex-start; /*pour coller les deux menus */
+    }
+    
+    .menu_element{
+        padding-left: 15px; /*pour laisser de l'espace aux différents onglets */
+    }
+
+    /*section slide */
+    .accueil{        
+    height: 330px; /*réduction de la hauteur de l'image pour la voir en entière */
+    }
+    .accueil_text{
+        margin-top: 0px;
+    }
+    .suite_titre_slide_webagency{
+        width: 75%; /*on rétrécit la taille du conteneur pour occuper moins de place sur l'image*/
+    }
+    .texte_slide_webagency{
+        display: inline-block; /*mis en inline-block pour pouvoir le modifier en taille */
+        width: 70%; /*retrécissement de la taille pour qu'il rentre bien dans l'image du slide */
+    }
+    .fa-chevron-left , .fa-chevron-right{ /*cache les flêches */
+        visibility: hidden;
+    }
+
+    /*section services */
+    .services{ /*pour aérer le contenu */
+        margin-left: 5%; 
+        margin-right: 5%;
+    }
+    .conteneur_img_et_para{
+        display: block;
+    }
+    .img_services{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    /*sections projets */
+    .projets{ /*pour aérer le contenu */
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: rgba(150, 150, 150, 0.33); /*fond gris clair */
+    }
+    
+    .element{
+        width: 50%; /*pour afficher deux images a chaque lignes */
+        padding: 1%; /*laisser de l'espace autour de l'image */
+    
+    }
+    .text{ /*suppression du hover pour faire directement apparaitre la légende sous les images sur du tactile */
+        bottom:0px;
+        width: 96%;
+        margin-bottom: 3%;
+        margin-left: 2%;
+    }
+/*-----------------------------------------------------
+            Section contact
+-------------------------------------------------------*/
+    .conteneur_iframe iframe{
+        position: static;
+    }
+    .conteneur_form_contact{
+        display: block; /*pour avoir le formulaire en dessous de la carte */
+        margin-top: 20px; /*aération avec le dessus du formulaire */
+   }
+   .form_contact{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center; /*centrage du contenu dans le formulaire */
+   }
+    .submit_bouton{
+        border: 1px solid rgb(93,188,210); /*largeur de la bordure */
+        border-radius: 5px; /*arrondi de la bordure */
+        background-color: rgb(93,188,210); /*couleur de background du bouton */
+        color: #fbf9fa; /*couleur de l'écriture */
+        width: 90%; /*largeur du bouton */
+        padding: 10px 0px; /*agrandissement du bouton en hauteur */
+    }
+}
+
+
+ /*-------------------------------------------------
+             pour les smartphones 
+--------------------------------------------------*/
+@media only screen and (max-width: 480px){
+
+/*paramètres généraux */
+
+.circle_titre::before{ /*ligne a gauche et a droite du point bleu */
+    left: 10%; /*agrandissement */
+    right: 10%; /*agrandissement */
+}
+
+/*Section menu */
+    .header{
+        display: block; /* pour avoir le menu en dessous du logo fin de flex */
+        text-align: center; /*pour centrer logo et menu en dessous */
+    }
+    
+    .conteneur{ /*conteneur avec les images */
+        display: flex;
+        flex-direction: row;
+    }
+    .element{
+        width: 98% !important; /*pour afficher deux images a chaque lignes */
+        padding: 1%; /*laisser de l'espace autour de l'image */
+    }
+    .nav_menu{
+        width: 100%; /*occupation de 100% de la largeur de l'écran */
+        font-size: 15px; /*réduction de la taille de la police */
+    }.li_menu{
+        justify-content: space-around; /*pour centrer le menu */
+        padding-left: 0px; /*pour centrer le menu */
+    }
+    .menu_element{
+        padding-left: 10px; /*réduction de l'espace entre les menus */
+    }
+
+/*section slide */
+
+    .accueil{
+        height: 135px;
+        margin-top: 60px;
+        display: block;
+        width: 100%;
+    }
+    .accueil_text{
+        margin-bottom: 0px; /*suppression de la marge inférieur pour réduire l'écart car la photo est plus petite */
+        margin-top: 200px;
+    }
+    .fa-chevron-left , .fa-chevron-right{ /*cache les flêches */
+        visibility: hidden;
+    }
+
+    .texte_slide{
+        text-align: center; /*centrage du titre */
+        margin-right: 20px; /*pousse le texte légèrement à droite */
+    }
+    .suite_titre_slide_webagency{
+        color: black; /*coloration du texte webagency en noir pour le faire ressortir sur le blanc */
+        width: 100%; 
+    }
+    .texte_slide_webagency{
+        color: black; /*coloration du texte webagency en noir pour le faire ressortir sur le blanc */
+    }
+
+/*Section services */
+    .img_services{
+        width: 80%; /*réduction de l'image de l'ordinateur */
+    }
+
+    /*texte services */
+    .para_services{
+        text-align: center; /*on centre tous les textes de la section service */
+    }
+        .ux_design{
+            display: block; /*placement des icones au dessus du texte */
+        }
+        .ui_design{
+            display: block; /*placement des icones au dessus du texte */
+        }
+        .seo{
+            display: block; /*placement des icones au dessus du texte */
+        }
+    .texte_para_services, .p_intro_services, .p_projets{
+        text-align: justify; /*justification du texte en smartphone plus esthétique */
+    }
+    .icon{ /*pour centrer les icones */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .boutonbleu{
+        border: 1px solid rgb(93,188,210); /*largeur de la bordure */
+        border-radius: 5px; /*arrondi de la bordure */
+        background-color: rgb(93,188,210); /*couleur de background du bouton */
+        color: #fbf9fa; /*couleur de l'écriture */
+        width: 70%; /*largeur du bouton */
+        margin-left: auto; /*centrer horizontalement */
+        margin-right: auto; /*centrer horizontalement */
+        padding: 10px 0px; /*agrandissement du bouton en hauteur */
+    }
+
+
+/*Section projets*/
+    .p_projets{
+        width: 100%; /*Texte para projet prends la largeur totale de la page */
+    }
+    .ensemble_boutons_projets{
+        display: block; /*pour les superposer et supprimer le display flex */
+        padding: 0px 40px; /*padding haut et bas 0px et gauche droite 40px */   
+    }
+    .bouton_select_portfolio_1{
+        border-radius: 20px 20px 0px 0px;; /*bords arrondis en haut*/
+        margin-bottom: 5px;
+        background-color: rgb(93,188,210);
+        color: white;
+    }
+    .bouton_select_portfolio{
+        
+        margin-bottom: 5px;
+        background-color: rgb(93,188,210);
+        color: white;
+    }
+    .bouton_select_portfolio_4{
+        border-radius: 0px 0px 20px 20px; /*bords arrondis en bas */
+        background-color: rgb(93,188,210);
+        color: white;
+    }
+
+    .ensemble_boutons_projets > li{
+        padding: 0px;
+    }
+    .text{ /*suppression du hover pour faire directement apparaitre la légende sous les images sur du tactile */
+        bottom:0px;
+        width: 98%;
+        margin-bottom: 2%;
+        margin-left: 1%;
+    }
+/*Section contact */
+    
+    .conteneur_iframe iframe{
+        position: static;
+    }
+    .conteneur_form_contact{
+        display: block; /*pour avoir le formulaire en dessous de la carte */
+        margin-top: 20px; /*aération avec le dessus du formulaire */
+   }
+   .form_contact{
+       width: 100%;
+       text-align: center; /*centrage du contenu dans le formulaire */
+   }
+    .submit_bouton{
+        border: 1px solid rgb(93,188,210); /*largeur de la bordure */
+        border-radius: 5px; /*arrondi de la bordure */
+        background-color: rgb(93,188,210); /*couleur de background du bouton */
+        color: #fbf9fa; /*couleur de l'écriture */
+        width: 90%; /*largeur du bouton */
+        padding: 10px 0px; /*agrandissement du bouton en hauteur */
+    }
+}
+
+
+
+

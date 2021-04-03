@@ -1,0 +1,257 @@
+/*je commence pas l'installation des polices d'écriture, ensuite déclaration des régles css body et générales (h1, p,...)
+pour continuer dans le plus précis avec les class et les id */
+
+/*contact pour maintenance ou renseignement sur le code : cidja@hotmail.fr */
+
+/*Installation des polices d'écritures */
+
+
+@font-face{ /*police d'écriture pour les symboles, avec plusieurs formats */
+    font-family: fontawesome-webfont;
+    src: url('fonts/webfonts/fa-brands-400.eot') format('eot');
+	src: url('fonts/webfonts/fa-brands-400.svg') format('svg');
+    src: url('fonts/webfonts/fa-brands-400.ttf') format('truetype');
+    src: url('fonts/webfonts/fa-brands-400.woff') format('woff');
+    src: url('fonts/webfonts/fa-brands-400.woof2') format('woff2');
+    src: url('fonts/webfonts/fa-regular-400.eot') format('eot');
+	src: url('fonts/webfonts/fa-regular-400.svg') format('svg');
+    src: url('fonts/webfonts/fa-regular-400.ttf') format('truetype');
+    src: url('fonts/webfonts/fa-regular-400.woff') format('woff');
+    src: url('fonts/webfonts/fa-regular-400.woff2') format('woff2');
+    src: url('fonts/webfonts/fa-solid-900.eot') format('eot');
+	src: url('fonts/webfonts/fa-regular-400.svg') format('svg');
+    src: url('fonts/webfonts/fa-solid-900.ttf') format('truetype');
+    src: url('fonts/webfonts/fa-solid-900.woff') format('woff');
+    src: url('fonts/webfonts/fa-solid-900.woff2') format('woff2');
+    
+}
+
+
+
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: #d3d3d3 !important;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  }
+
+*,*::before, *::after {box-sizing: border-box;} /* */
+
+
+.mainGreen, #textGreen{
+  color: #228b22;
+}
+
+
+/*-----------------Navbar Section -------------------------------*/
+#titleNavbar{
+  font-size: 50px;
+}
+.nav-item > .nav-link, .navbar-brand{
+  font-size: 25px;
+  color: white !important;
+  transition: color .5s; /* source: https://youtu.be/JOBlm6kWsMM?t=132 */
+}
+.linkNavbar:hover{
+  color: black !important;
+
+}
+
+/*-----------------Title Section---------------------------------*/
+.containerCircle {
+  position: relative;
+  z-index: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 10vh;
+  overflow: hidden;
+}
+
+.pulse {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 30rem;
+}
+.pulse circle {
+  fill: #ff5154;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: pulse 2s cubic-bezier(0.5, 0.5, 0, 1);
+          animation: pulse 2s cubic-bezier(0.5, 0.5, 0, 1);
+}
+.pulse circle:nth-child(2) {
+  fill: #7fc6a4;
+  -webkit-animation: pulse 2s 0.75s cubic-bezier(0.5, 0.5, 0, 1);
+          animation: pulse 2s 0.75s cubic-bezier(0.5, 0.5, 0, 1);
+}
+.pulse circle:nth-child(3) {
+  fill: #e5f77d;
+  -webkit-animation: pulse 2s 1.5s cubic-bezier(0.5, 0.5, 0, 1);
+          animation: pulse 2s 1.5s cubic-bezier(0.5, 0.5, 0, 1);
+}
+
+@-webkit-keyframes pulse {
+  25% {
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  25% {
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.mainTitle{
+  margin-top: 101px; /*pour se positionner en dessous de la navbar fixe */
+}
+#containerBanderolle{
+  overflow: hidden;
+  background-color: red;
+  border-radius: 25px;
+}
+.banderolle{
+  animation: banderolle 10s linear  infinite ;
+  position: relative;
+  color: white;
+}
+@keyframes banderolle{
+  from{transform: translatex(-70%);}
+  to{transform: translateX(100%);}
+}
+#devisMessage{ /*pour faire clignoter les mots devis gratuits */
+  animation-name: blinkDevis;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 0.7s;
+}
+@keyframes blinkDevis{
+  from{opacity: 0%;}
+  to{opacity: 100%;}
+}
+/*-----------------Section services -----------------------------*/
+.marginServiceSection{
+    height: 60px;
+}
+#servicesSection{
+  background-color: #7E5835; /*source: http://www.letoileauxsecrets.fr/couleurs/couleurs-brun.html */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    padding: 10px 5px 50px 5px;
+}
+
+.circle_para_services{ /*permet de couper le border du trait */
+  padding-left: 5px;
+  
+}
+.green{
+  color: #3A9D23;}
+.yellow{
+  color: #ffc107;}
+
+/*-----------------------Projects Section -----------------------*/
+ 
+.card-header button{
+  transition: font-size .5s;
+}
+.card-header:hover button{
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#projectsSection{
+  background-color: #3A9D23;
+  border-radius: 20px;
+}
+
+.col-sm-3{
+  padding-right: 0px !important; /* mis à 0 pour faire rentrer le .text dedans parfaitement*/
+  padding-left: 0px !important;
+}
+.text{
+  position: absolute; /*pour le juxtaposer par dessus .element img */
+  transition: all 0.3s;
+  background-color: rgba(64, 64, 64, 0.7);
+  width: 89%;
+  color: white;  
+  bottom: 0px; /* mis en dessous */
+  text-align: center;
+}
+.text_img_portfolio{ /*texte qui apparait quand on survol l'image du portfolio */
+  font-family: Roboto;
+  font-weight: 900; /*très grosse écriture */
+  margin-top: 15px; /*décalage pour baisser l'écriture */
+  
+}
+
+.sous_text_portfolio{ /*sous le titre des images au hover */
+  font-family: Roboto;
+  font-weight: 400; /*taille classique */
+}
+
+.element{
+  /*position: relative; /*parent de .text qui va permettre de positionner .text en absolute */
+  overflow: hidden;  /*Je cache le dépassement */
+ }
+
+.cardSelectionGreenLight{
+  background-color: #32CD32 !important;
+}
+
+/************************Map Section******************************/
+#map{
+    width: 100%;
+    height: 350px;
+    border-radius: 25px;
+    box-shadow: 7px 8px 5px 0px #71729B;
+}
+
+
+/**********************Contact Section **************************/
+#textContact{
+  background-color: #7E5835;
+  border-radius: 20px;
+}
+div > a, div > i, #socialPara{
+  color: #7E5835 !important;
+}
+
+#phoneContainer, #mailContainer, #socialContainer{
+  background-color: #32CD32 !important;
+  border-radius: 20px;
+}
+
+/*-------------------------------------------------
+             pour les smartphones 
+--------------------------------------------------*/
+@media only screen and (max-width: 480px){
+  
+  h3{
+    text-align: center;
+  }
+}

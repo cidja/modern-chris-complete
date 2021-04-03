@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang='fr-FR'>
+        <!--Petits commentaires concernant la mise en page 
+        pour les class j'ai crée des classes css génériques pour les utiliser partout dans le documents html
+        exemple: div class='projet w40p' ce qui est égale à class='width40%' car w40p est déclaré comme classe dans mon fichier style.css
+        autre point dans les déclarations de classe dans le document html quand j'écris à la fin de la classe un + ça signifie qu'il y a une déclaration
+        dans le ficihier style pour cette class et si je rajoute +tablette = class affecté par le breakpoint tablette (1023px) et idem si +smartphone-->
+        <head>
+            <title>
+                Webagency l'agence qu'il vous faut
+            </title>
+            
+
+            <meta charset='utf-8' />
+            <meta name="viewport" content="width=device-width, user-scalable=yes"> <!--ligne pour éviter bug des 960px de large sur tous les navigateurs sauf firefox mis le 1.8.19-->
+            <!--Pour le référencement source: https://tontonduweb.com/balises-meta-indispensables-pour-partage-sur-reseaux-sociaux/-->
+            <meta name='description' content="Site de l'agence webagency spécialiste de l'innovation publicitaire, pour une image qui marque ! " />
+            <meta name='keywords' content="agence, pub, publicité, webagency, bordeaux, graphisme, portfolio" />
+                
+                
+            <!-- Card meta pour Twitter -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:site" content="@webagency">
+            <meta name="twitter:title" content="Web agency une agence au top de la pub !">
+            <meta name="twitter:description" content="Présentation de l'agence de pub du 21ième siécle !">
+            <!-- Twitter summary card avec image large de 280x150px -->
+            <meta name="twitter:image:src" content="images/tag_twitter.jpg">
+            
+            <!-- Open Graph meta pour Facebook -->
+            <meta property="og:title" content="Webagency" />
+            <meta property="og:url" content="http://linternaute-averti.fr/p1/index.html" />
+            <meta property="og:image" content="images/tag_facebook.jpg" />
+            <meta property="og:description" content="Présentation de l'agence de pub du 21ième siécle !" />
+            <meta property="og:site_name" content="l'internaute-averti" />
+            <link rel='stylesheet' href='style.css' /> <!--Lien pour la feuille de style-->
+            <link rel='stylesheet' href='fonts/css/all.css' /> <!--pour la police font awesome source: https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself-->
+            <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet"> <!--Polices GOOGLE-->
+        </head>
+
+
+    <body class='Roboto mb50px'>
+        <header class='header pfixed padt5px autolr  flex flex-jb +'> <!--Qui constitue le haut du site en position fixed-->
+        <div class='logo'>
+            <img src='images/logo.png' alt='logo de web agency' title='voici notre logo' />
+        </div>
+            <nav class=' nav_menu w40p Roboto fs20px'> <!--va chercher la class w40p-->
+                <ul class='li_menu flex flex-jb'> <!--Menu qui devra être fixe toujours affiché en haut, utilsation de class avoir un unique-->
+                    <li  class='menu_element listtypenone +'><a class='anone' href='#accueil'>Accueil</a></li> <!--Les liens ne donnent sur rien mais j'ai mis des liens pour pouvoir faire une régle :hover dessus-->
+                    <li  class='menu_element listtypenone +'><a class='anone' href='#services'>Services</a></li><!--href avec des ancres pour renvoyer dans chaque partie de la page-->
+                    <li  class='menu_element listtypenone +'><a class='anone' href='#projets'>Portflio</a></li>
+                    <li  class='menu_element listtypenone +'><a class='anone' href='#contact'>Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <!--Section accueil-->
+        <div id='accueil' class='h60px'></div> <!--id accueil pour l'ancre dans le menu en haut-->
+        <div class='accueil pabsolute + +tablette +smartphone'> <!--permet de mettre l'image en fond-->
+            <div class='fond_timeline pabsolute'>
+                <div class='timeline prelative +'></div> <!--affiche une timeline sous le slider-->
+            </div>
+        </div>
+        <section class='accueil_text mt200px mb200px flex flex-ac prelative overhidden +tablette'>
+            <i class="fas fa-chevron-right pabsolute ml98p blancgris +"></i> <!--position absolute pour passer derrière le titre-->
+            <i class="fas fa-chevron-left pabsolute  ml5px blancgris +"></i> <!--position absolute pour passer derrière le titre-->
+                <!--les images du slide sont passés en css via background-image-->
+            <div class='texte_slide ml8p'> <!--Englobe tous les enfants avec la police Roboto-Black-->
+                <h1 class='suite_titre_slide_webagency fs25px blancgris +tablette +smartphone'>
+                    <span class='titre_slide_webagency bleugris'>WEBAGENCY</span> 
+                : L'AGENCE DE TOUS VOS PROJETS !
+                </h1>
+                <span class='texte_slide_webagency fs18px blancgris +smartphone'>Vous avez un projet web ? la webagency vous aide à le réaliser !</span>
+                <div>
+                    <a href='#contact' class='anone'>
+                        <div class='boutonbleu pad15px mt15px + +smarthpone'> Plus d'infos</div>
+                    </a>
+                </div>
+            </div>   
+        </section>
+
+        
+        <!--Section services-->
+        <div id='services' class='h60px'></div> <!--div mis pour que l'ancre arrive pile sur le mot service-->
+        <section class='services lh25px +tablette'>
+            <h2 class='titre_services txtcenter fs35px ftblack'>NOS SERVICES 
+            </h2>
+            <!--3 lignes du dessous pour faire circle avec lignes sur les côtés voir css paramètres css des balises class et class -->
+            <span class='circle_titre + +smarthpone'>
+                <i class='fas fa-circle circle_titre_submenu +'></i>
+            </span>
+            <p class='p_intro_services txtcenter'>
+            Web agency est une agence au TOP de la technologie, venez tester notre showroom
+            interactif en réalitée augmentée pour montrer à vos clients le futur du web 3.0
+            </p>
+            <div class='conteneur_img_et_para flex flex-ac maxw1400px autolr +tablette'> <!--Display flex avec un align-items center pour les mettre centré dans le div-->
+                <img class='img_services w100p +tablette +smarthpone' src='images/main-feature.png' alt="dessin d'ordinateur" /> 
+                <div class='para_services +smarthpone flex flex-jb flexdcol'>
+                    <div class='ux_design flex flex-ac +smarthpone'>
+                        <div class='icon flex flex-ac + +smartphone'>
+                            <i class="fas fa-chart-line fa-3x"></i> <!--graph font awesome en taille 3x-->
+                            <i class="fas fa-circle circle_para_services ml8p +"></i> <!--Cercle mis a côté-->
+                        </div>
+                        <aside class='texte_ux_design'>
+                            <h3 class='fs25px ftbold'>UX design</h3>
+                            <p class='texte_para_services +smartphone'>L'UX-Design (User eXperience Design) est une discipline dont l'objectif est de concevoir 
+                            un produit au service des utilisateurs. La difficulté est alors de faire rencontrer la 
+                            stratégie du premier avec la réalité des derniers. 
+                            </p>
+                        </aside>
+                    </div>
+                    <div class='ui_design flex flex-ac'>
+                        <div class='icon flex flex-ac + +smartphone'>
+                            <i class="fas fa-cubes fa-3x"></i> <!--Cube font awesome en taille 3x-->
+                            <i class="fas fa-circle circle_para_services ml8p +"></i> <!--Cercle mis a côté-->
+                        </div>
+                        <aside class='text_ui_design'>
+                            <h3 class='fs25px ftbold'>UI Design</h3>
+                            <p class='texte_para_services +smartphone'>UI est l’abréviation d’user interface ou interface utilisateur. L’UI design se rapporte donc à l’environnement
+                            graphique dans lequel évolue l’utilisateur d’un logiciel, d’un site web ou d’une application.
+                            </p>
+                        </aside>
+                    </div>
+                    <div class='seo flex flex-ac'>
+                        <div class='icon flex flex-ac + +smartphone'>
+                            <i class="fas fa-chart-pie fa-3x"></i> <!--camembert font awesome en 3x-->
+                            <i class="fas fa-circle circle_para_services_pie ml8p +"></i> <!--Cercle mis a côté-->
+                        </div>
+                        <aside class='text_seo'>
+                            <h3 class='fs25px ftbold'>SEO</h3>
+                            <p class='texte_para_services +smartphone'>L'optimisation pour les moteurs de recherche, référencement naturel ou SEO (pour search engine optimization), 
+                            est un ensemble de techniques visant à optimiser la visibilité d'une page web.
+                            </p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        <br /><br />
+        <!--Section exemple_projets-->
+        <section class='projets txtcenter +tablette'> <!--id projets pour l'ancre dans le menu en haut-->
+            <div id='projets' class='h60px'></div>
+            <div class='titre_projet maxw1400px autolr'>
+                <h2 class='txtcenter fs35px ftblack'>NOS PROJETS</h2>
+                <!--3 lignes du dessous pour faire circle avec lignes sur les côtés voir css paramètres css des balises class et class -->
+                <span class='circle_titre_projet + +smartphone'>
+                    <i class="fas fa-circle circle_titre_submenu_projet +smarthpone"></i>
+                </span>
+                <p class='p_projets w60p autolr'>Vous allez découvrir en dessous tout nos projets de création que nous mettons a disposition.
+                Si quelque chose vous intéresse rapprochez vous de nous.
+                </p>
+            </div>
+
+            <div class='boutons autolr maxw1400px '>
+                <ul class='ensemble_boutons_projets flex flex-jc listtypenone + +smartphone'> 
+                    <li class='bouton_select_portfolio_1 +'>
+                        <label>All Works</label>
+                    </li>
+                    <li class='bouton_select_portfolio +'>
+                        <label>Creative</label>
+                    </li>
+                    <li class='bouton_select_portfolio +'>
+                        <label>Corporate</label>
+                    </li>
+                    <li class='bouton_select_portfolio_4 +'>
+                        <label>Portfolio</label>
+                    </li>
+                </ul>
+            </div>
+            <!--Conteneur qui va servir pour faire le portofolio avec un display: flexbox flexjustify beetween (pour centrer), flexwrap pour le retour à la ligne de flex
+            autolr pour centrer horizontalement et un max-width : 1600px pour être légèrement plus large que le reste des paragraphes-->
+            <div class='conteneur flex flex-jb flex-wrap txtleft autolr maxw1600px +tablette +smartphone'> 
+                <div class='element + +tablette +smartphone'>
+                    <img class='img_portfolio' src='images/portofolio/01.jpg' alt='lunettes' />
+                    <div class='text +'>
+                        <div class='content_eye ml80p'>
+                            <div class='eye pabsolute'><i class="far fa-eye"></i></div>
+                        </div>
+                        <div class='text_img_portfolio +'>Portfolio item 1
+                            <div class='sous_text_portfolio +'>Paire de lunette</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='element + +tablette +smartphone'>
+                    <img class='img_portfolio' src='images/portofolio/02.jpg' alt='lapin' />
+                    <div class='text +'>
+                        <div class='content_eye ml80p'>
+                            <div class='eye pabsolute'><i class="far fa-eye"></i></div>
+                        </div>
+                        <div class='text_img_portfolio +'>Portfolio item 2
+                            <div class='sous_text_portfolio +'>Lapin</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='element + +tablette +smartphone'>
+                    <img class='img_portfolio' src='images/portofolio/03.jpg' alt='logo pompadour' />
+                    <div class='text +'>
+                        <div class='content_eye ml80p'>
+                            <div class='eye pabsolute'><i class="far fa-eye"></i></div>
+                        </div>
+                        <div class='text_img_portfolio +'>Portfolio item 3
+                            <div class='sous_text_portfolio +'>logo pompadour</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='element + +tablette +smartphone'>
+                    <img class='img_portfolio' src='images/portofolio/04.jpg' alt='une feuille de papier' />
+                    <div class='text +'>
+                        <div class='content_eye ml80p'>
+                            <div class='eye pabsolute'><i class="far fa-eye"></i></div>
+                        </div>
+                        <div class='text_img_portfolio +'>Portfolio item 4
+                            <div class='sous_text_portfolio +'>une feuille de papier</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='element + +tablette +smartphone'>
+                    <img class='img_portfolio' src='images/portofolio/05.jpg' alt='deux sacs de shopping' />
+                    <div class='text +'>
+                        <div class='content_eye ml80p'>
+                            <div class='eye pabsolute'><i class="far fa-eye"></i></div>
+                        </div>
+                        <div class='text_img_portfolio +'>Portfolio item 5
+                            <div class='sous_text_portfolio +'>deux sacs de shopping</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='element + +tablette +smartphone'>
+                    <img class='img_portfolio' src='images/portofolio/06.jpg' alt='une ville au loin avec un pont en premier plan' />
+                    <div class='text +'>
+                        <div class='content_eye ml80p'>
+                            <div class='eye pabsolute'><i class="far fa-eye"></i></div>
+                        </div>
+                        <div class='text_img_portfolio +'>Portfolio item 6
+                            <div class='sous_text_portfolio +'>Une ville au loin</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='element + +tablette +smartphone'>
+                    <img class='img_portfolio' src='images/portofolio/07.jpg' alt='logo de fusée qui décolle' />
+                    <div class='text +'>
+                        <div class='content_eye ml80p'>
+                            <div class='eye pabsolute'><i class="far fa-eye"></i></div>
+                        </div>
+                        <div class='text_img_portfolio +'>Portfolio item 7
+                            <div class='sous_text_portfolio +'>logo de fusée qui décolle</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='element + +tablette +smartphone'>
+                    <img class='img_portfolio' src='images/portofolio/08.jpg' alt='plusieurs outils de bureau' />
+                    <div class='text +'>
+                        <div class='content_eye ml80p'>
+                            <div class='eye pabsolute'><i class="far fa-eye"></i></div>
+                        </div>
+                        <div class='text_img_portfolio +'>Portfolio item 8
+                            <div class='sous_text_portfolio +'>plusieurs outils de bureau</div>
+                        </div>
+                    </div>
+                </div>
+                        
+            </div>
+        </section>
+        <!--Bas de la page avec les infos de l'agence (carte et formulaire de contact-->
+        <div id='contact' class='h60px'></div> <!--id contact pour l'ancre dans le menu en haut-->
+        <footer class='contact overhidden m0px '> <!--Va rassembler la carte et aussi le formulaire de contact-->
+            <div class='conteneur_iframe prelative + +tablette +smartphone'> <!--i frame mis dans un conteneur div pour régler la width et passer le w3c source: https://www.coactis.fr/le-coin-du-geek/comment-rendre-une-iframe-responsive-->
+                <!--Code pour la carte maps source: https://embedgooglemaps.com/fr/ -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2663939332338!2d2.348027516019344!3d48.87219797928876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1415bc351f%3A0x655b5a765eac26ad!2s20%20Rue%20d&#39;Hauteville%2C%2075010%20Paris!5e0!3m2!1sfr!2sfr!4v1580134261418!5m2!1sfr!2sfr" width="1600" height="550" frameborder="0" style="border:0;" allowfullscreen></iframe>
+                
+                <div class='conteneur_form_contact + +tablette +smartphone'>  <!--Conteneur placé pour mettre en forme aligné verticalement sur le reste du document le contact form-->  
+                    <div class='form_contact prelative w25p pad10px + +tablette +smartphone'> <!--formulaire de contact ne dois pas être fonctionnel-->
+                        <form method='post' action='validation_contact_form'>
+                            <div class='Roboto fs30px'>Contact info </div>
+                            <div class='texte_form lh30px'>
+                                <div class='Roboto fs20px'>Webagency SAS </div>
+                                <div class='Roboto fs15px'>
+                                25 Rue d'Hauteville 75010 Paris<br />
+                                Tél : 01.42.56.89.85 
+                                </div>
+                            </div>
+                            <div class='cases_form'>
+                                <label for='name'>
+                                    <!--Input text avec un préremplissage (placeholder) 'votre nom'
+                                    mis sur autofocus pour que le visiteur n'est pas a cliquer dessus et un champ required
+                                    pour indiquer que le nom est obligatoire pour l'envoi du formulaire (je réutilise la même
+                                    forme pour tous les champs) -->
+                                    <input type='text' id='name' class='name w90p h30px mtb10pxlr0' name='name' placeholder='votre nom'  required /> 
+                                </label>
+                                <br /> <!--Un saut de ligne pour la mise en page c'est plus esthétique-->
+                                <label for='mail'>
+                                    <input type='email' id='mail' class='mail  w90p h30px mtb10pxlr0' name='mail' placeholder='votre mail' required />
+                                </label>
+                                <br /> <!--Un saut de ligne pour la mise en page c'est plus esthétique-->
+                                <label for='subject'>
+                                    <input type='text' id='subject' class='subject  w90p h30px mtb10pxlr0' name='subject' placeholder='sujet du message' required />
+                                </label>
+                                <br /> <!--Un saut de ligne pour la mise en page c'est plus esthétique-->
+                                <label for='message'>
+                                    <textarea id='message' class='w90p h120px mtb10pxlr0' placeholder="votre message"></textarea>
+                                </label>
+                                <br /> <!--Un saut de ligne pour la mise en page c'est plus esthétique-->
+                                <!--Bouton de validation du formulaire-->
+                                <input type='submit' class='submit_bouton pad15px + +tablette +smartphone' value='envoyer le message' />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                            
+            
+        </footer>
+    </body>
+</html>
