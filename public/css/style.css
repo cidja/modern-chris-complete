@@ -167,7 +167,9 @@ font-size: 30px;} */
 is where I put all css property for homepage--------------------------------*/
 
 /* -------------------part for container in home selection and in different parts projects ---------*/
-
+.imgContainer{
+    filter: brightness(50%);
+}
 .textInnerImg{ /*for text in image at home */
     position: absolute;
     top: 0;
@@ -188,19 +190,29 @@ is where I put all css property for homepage--------------------------------*/
     border-radius: 20px;
 } */
 
+/* -----------------Element huclink (huclink) -------------------------*/
+#elementhuclink{animation: huclink 1.5s;}
+@keyframes huclink{
+    from{transform: translateX(-100%);}
+    to{transform: translateX(0%);}}
+#cadrehuclink{background-color: var(--orange) !important;}
+
+#bigContainerHuclink{/* pour le cadre autour des images sur le home */
+    background-color: var(--pastel-orange);} /* source: https://colorhunt.co/palette/153787 */
+
 /* -----------------Element ajjardin -------------------------*/
 #elementajjardin{animation: appearaj 1.5s;}
 @keyframes appearaj{
-    from{transform: translateX(-100%);}
+    from{transform: translateX(100%);}
     to{transform: translateX(0%);}}
 #cadreaj{background-color: var(--green) !important;}
 
  #bigContainerAj{/* pour le cadre autour des images sur le home */
     background-color: var(--pastel-green);} 
 
-/* -----------------Element p5 (il était une fois) -------------------------*/
-#elementp5{animation: appearp5 2.5s;}
-@keyframes appearp5{
+/* -----------------Element apparition (il était une fois) -------------------------*/
+#apparition{animation: apparition 1.5s;}
+@keyframes apparition{
     from{transform: rotateY(90deg);}
     to{transform: rotateY(0deg);}}
 #cadrep5{background-color: var(--orange) !important;}
@@ -208,6 +220,11 @@ is where I put all css property for homepage--------------------------------*/
  #bigContainerp5{/* pour le cadre autour des images sur le home */
     background-color:var(--pastel-orange);} */
 
+/* -----------------Element apparition (il était une fois) -------------------------*/
+#apparition2{animation: apparition2 2.5s;}
+@keyframes apparition2{
+    from{transform: rotateY(90deg);}
+    to{transform: rotateY(0deg);}}
 /* -----------------Element p4 (blog jean forteroche) -------------------------*/
 #elementp4{animation: appearp4 2s;}
 @keyframes appearp4{
@@ -221,7 +238,7 @@ is where I put all css property for homepage--------------------------------*/
 /* -----------------Element p3 (location vélo) -------------------------*/
 #elementp3{animation: appearp3 2.5s;}
 @keyframes appearp3{
-    from{transform: translateX(100%);}
+    from{transform: translateX(-100%);}
     to{transform: translateX(0%);}}
 #cadrep3{background-color: var(--red) !important;}
 
@@ -229,10 +246,10 @@ is where I put all css property for homepage--------------------------------*/
     background-color: var(--pastel-red);} /* source: https://colorhunt.co/palette/153787 */
 
 /* -----------------Element p2 (blog wordpress) -------------------------*/
-#elementp2{animation: appearp2 3s;}
+#elementp2{animation: appearp2 2.5s;}
 @keyframes appearp2{
-    from{transform: translateY(100%);}
-    to{transform: translateY(0%);}}
+    from{transform: translateX(100%);}
+    to{transform: translateX(0%);}}
 #cadrep2{background-color: var(--indigo) !important;}
 
  #bigContainerp2{/* pour le cadre autour des images sur le home */

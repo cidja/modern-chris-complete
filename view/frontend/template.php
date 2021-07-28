@@ -23,7 +23,7 @@
     
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark  bg-dark" >
-      <a class="navbar-brand" href="index.php?action=home" id="brand">
+      <a class="navbar-brand" href="/" id="brand">
         modern-chris.fr
       </a>
     <!--bouton quand écran petit pour le menu-->
@@ -50,7 +50,7 @@
           <a class="nav-link" id="cvLink" href="index.php?action=cv" ><i class="far fa-id-badge"></i>  Mon CV</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="mailLink" href="mailto:christian@linternaute-averti.fr?subject=message de l'internaute averti"><i class="far fa-envelope-open"></i>  Contact</a>
+          <a class="nav-link" id="mailLink" href="mailto:christian@netc.eu?subject=message de modern-chris"><i class="far fa-envelope-open"></i>  Contact</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="linkedInLink" href="https://fr.linkedin.com/in/christian-georges-7595a1141?trk=profile-badge-cta"><i class="fab fa-linkedin"></i>  Profil</a>
