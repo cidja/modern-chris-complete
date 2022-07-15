@@ -41,6 +41,13 @@
       <input type="submit" value="valider">
     </div>
 </div>
+<div class="">Nombre total de km : <p>...</p></div>
+</*?php
+    foreach($infos as $data) //source: https://www.php.net/manual/fr/control-structures.foreach.php
+      {
+        $data['date'] . "      " . $data['km']
+      }
+      ?*/>
 
 </body>
 </html>
