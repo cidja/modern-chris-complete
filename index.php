@@ -35,6 +35,9 @@ try{
     elseif($_GET["action"] == "attestation"){
       ToolsFrontend::attestation();
     }
+    elseif($_GET["action"] == "tools"){
+      ToolsFrontend::tools();
+    }
   }
   else{
     ToolsFrontend::home();
