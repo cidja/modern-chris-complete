@@ -39,7 +39,7 @@ trait ToolsFrontend {
     }
     public static function tools()
     {
-        header("view/frontend/tools.php");
+        require("view/frontend/tools.php");
     }
 
 }
