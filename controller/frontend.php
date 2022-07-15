@@ -37,6 +37,10 @@ trait ToolsFrontend {
     {
         header("location: ./public/img/diplome_webdev.pdf");
     }
+    public static function tools()
+    {
+        header("view/frontend/tools.php");
+    }
 
 }
 
