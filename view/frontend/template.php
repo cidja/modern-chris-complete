@@ -58,6 +58,9 @@
         <li class="nav-item">
           <a class="nav-link" id="attestationLink" href="index.php?action=attestation"><i class="fas fa-user-graduate"></i>  diplôme</a>
         </li>
+	<li class="nav-item">
+          <a class="nav-link" id="toolslink" href="index.php?action=tools">Outils</a>
+        </li>
       </ul>
       </div>
     </nav>
