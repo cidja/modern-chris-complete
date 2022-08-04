@@ -5,6 +5,13 @@
     --pastel-yellow: hsl(45, 100%, 80%);
     --pastel-red:hsl(354, 68%, 80%);
     --pastel-indigo: hsl(241, 83%, 91%);
+    --light-black: hsl(0, 0%, 18.8%);
+
+/* traverse city color palette */
+    --blue-t : #5093B3;
+    --green-t : #64c4c3;
+    --brown-t : #f8d49a;
+    --sable-t : #f7e6ca;
 
 
 }
@@ -13,8 +20,10 @@
 }
 
 body{
-    background-color: var(--pastel-blue);
+    /* source pour le gradient : https://cssgradient.io/ */
+    background: #f7e6ca !important;
     font-family: 'Chakra Petch', sans-serif !important; /* font-google */
+    color :  var(--light-black) !important;
 }
 .dnone{ 
     display: none !important;}
@@ -131,7 +140,7 @@ font-size: 30px;} */
 
 
 #bigContainer{
-    background-color: var(--pastel-blue);
+    /*background-color: var(--pastel-blue);*/
     padding: 1px;
     overflow: hidden;
 }
@@ -191,21 +200,28 @@ is where I put all css property for homepage--------------------------------*/
 } */
 
 /* -----------------Element huclink (huclink) -------------------------*/
-#elementhuclink{animation: huclink 1.5s;}
-@keyframes huclink{
+#elementgauche{animation: glissementdelagauche 1.5s;}
+@keyframes glissementdelagauche{
     from{transform: translateX(-100%);}
     to{transform: translateX(0%);}}
+
 #cadrehuclink{background-color: var(--orange) !important;}
 
 #bigContainerHuclink{/* pour le cadre autour des images sur le home */
     background-color: var(--pastel-orange);} /* source: https://colorhunt.co/palette/153787 */
 
-/* -----------------Element ajjardin -------------------------*/
-#elementajjardin{animation: appearaj 1.5s;}
-@keyframes appearaj{
+
+/* numérotation des tuiles comme suit 
+1 2 3 4
+5 6 7 8
+*/
+/* -----------------tuiles à droite -------------------------*/
+#elementdroite{animation: glissementdeladroite 1.5s;}
+@keyframes glissementdeladroite{
     from{transform: translateX(100%);}
     to{transform: translateX(0%);}}
-#cadreaj{background-color: var(--green) !important;}
+
+#cadredroit{background-color: var(--green) !important;}
 
  #bigContainerAj{/* pour le cadre autour des images sur le home */
     background-color: var(--pastel-green);} 
