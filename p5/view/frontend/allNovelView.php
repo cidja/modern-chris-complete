@@ -34,7 +34,7 @@ ob_start(); //Start of capture to put it in the variable at the end of the scrip
         </form>
     </div>
     <div class="container text-center mt-4" id="sort">
-        <button type="submit"  class="btn btn-success" id="sortAlphabetical">Tri par ordre alphabétique</button>
+        <button type="submit"  class="btn btn-success" id="sortbytitle">Tri par ordre alphabétique</button>
     </div>
     <div class="nbNovels">
         <div class="d-flex justify-content-center text-white">

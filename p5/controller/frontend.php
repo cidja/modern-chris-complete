@@ -176,6 +176,13 @@ use cidja\commentManager\Model_CommentManager;
                 require("view/frontend/allNovelView.php");
             }
 
+            public static function sortTitle()
+            {
+                $novelManager = new Model_NovelManager();
+                $infos = $novelManager->sortTitle();
+                require("view/frontend/allNovelView.php");
+            }
+
             //*******************Delete Part **************************** */
             public static function formDeleteNovel($id, $novel)
             {
